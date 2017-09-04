@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE700EFE1F5CEB4300B62778 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE700EFD1F5CEB4300B62778 /* main.m */; };
+		BE700F011F5CEB4300B62778 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE700F001F5CEB4300B62778 /* AppDelegate.m */; };
+		BE700F041F5CEB4300B62778 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE700F031F5CEB4300B62778 /* ViewController.m */; };
+		BE700F071F5CEB4300B62778 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE700F051F5CEB4300B62778 /* Main.storyboard */; };
+		BE700F091F5CEB4300B62778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE700F081F5CEB4300B62778 /* Assets.xcassets */; };
+		BE700F0C1F5CEB4300B62778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE700F0A1F5CEB4300B62778 /* LaunchScreen.storyboard */; };
+		BE700F171F5CEB4300B62778 /* SelectAddressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE700F161F5CEB4300B62778 /* SelectAddressTests.m */; };
+		BE700F221F5CEB4300B62778 /* SelectAddressUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE700F211F5CEB4300B62778 /* SelectAddressUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE700F131F5CEB4300B62778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE700EF11F5CEB4300B62778 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE700EF81F5CEB4300B62778;
+			remoteInfo = SelectAddress;
+		};
+		BE700F1E1F5CEB4300B62778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE700EF11F5CEB4300B62778 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE700EF81F5CEB4300B62778;
+			remoteInfo = SelectAddress;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE700EF91F5CEB4300B62778 /* SelectAddress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectAddress.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE700EFD1F5CEB4300B62778 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE700EFF1F5CEB4300B62778 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE700F001F5CEB4300B62778 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE700F021F5CEB4300B62778 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE700F031F5CEB4300B62778 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE700F061F5CEB4300B62778 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE700F081F5CEB4300B62778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE700F0B1F5CEB4300B62778 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE700F0D1F5CEB4300B62778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE700F121F5CEB4300B62778 /* SelectAddressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelectAddressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE700F161F5CEB4300B62778 /* SelectAddressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectAddressTests.m; sourceTree = "<group>"; };
+		BE700F181F5CEB4300B62778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE700F1D1F5CEB4300B62778 /* SelectAddressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelectAddressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE700F211F5CEB4300B62778 /* SelectAddressUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectAddressUITests.m; sourceTree = "<group>"; };
+		BE700F231F5CEB4300B62778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE700EF61F5CEB4300B62778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE700F0F1F5CEB4300B62778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE700F1A1F5CEB4300B62778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE700EF01F5CEB4300B62778 = {
+			isa = PBXGroup;
+			children = (
+				BE700EFB1F5CEB4300B62778 /* SelectAddress */,
+				BE700F151F5CEB4300B62778 /* SelectAddressTests */,
+				BE700F201F5CEB4300B62778 /* SelectAddressUITests */,
+				BE700EFA1F5CEB4300B62778 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE700EFA1F5CEB4300B62778 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE700EF91F5CEB4300B62778 /* SelectAddress.app */,
+				BE700F121F5CEB4300B62778 /* SelectAddressTests.xctest */,
+				BE700F1D1F5CEB4300B62778 /* SelectAddressUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE700EFB1F5CEB4300B62778 /* SelectAddress */ = {
+			isa = PBXGroup;
+			children = (
+				BE700EFF1F5CEB4300B62778 /* AppDelegate.h */,
+				BE700F001F5CEB4300B62778 /* AppDelegate.m */,
+				BE700F021F5CEB4300B62778 /* ViewController.h */,
+				BE700F031F5CEB4300B62778 /* ViewController.m */,
+				BE700F051F5CEB4300B62778 /* Main.storyboard */,
+				BE700F081F5CEB4300B62778 /* Assets.xcassets */,
+				BE700F0A1F5CEB4300B62778 /* LaunchScreen.storyboard */,
+				BE700F0D1F5CEB4300B62778 /* Info.plist */,
+				BE700EFC1F5CEB4300B62778 /* Supporting Files */,
+			);
+			path = SelectAddress;
+			sourceTree = "<group>";
+		};
+		BE700EFC1F5CEB4300B62778 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE700EFD1F5CEB4300B62778 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE700F151F5CEB4300B62778 /* SelectAddressTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE700F161F5CEB4300B62778 /* SelectAddressTests.m */,
+				BE700F181F5CEB4300B62778 /* Info.plist */,
+			);
+			path = SelectAddressTests;
+			sourceTree = "<group>";
+		};
+		BE700F201F5CEB4300B62778 /* SelectAddressUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE700F211F5CEB4300B62778 /* SelectAddressUITests.m */,
+				BE700F231F5CEB4300B62778 /* Info.plist */,
+			);
+			path = SelectAddressUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE700EF81F5CEB4300B62778 /* SelectAddress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE700F261F5CEB4300B62778 /* Build configuration list for PBXNativeTarget "SelectAddress" */;
+			buildPhases = (
+				BE700EF51F5CEB4300B62778 /* Sources */,
+				BE700EF61F5CEB4300B62778 /* Frameworks */,
+				BE700EF71F5CEB4300B62778 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SelectAddress;
+			productName = SelectAddress;
+			productReference = BE700EF91F5CEB4300B62778 /* SelectAddress.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE700F111F5CEB4300B62778 /* SelectAddressTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE700F291F5CEB4300B62778 /* Build configuration list for PBXNativeTarget "SelectAddressTests" */;
+			buildPhases = (
+				BE700F0E1F5CEB4300B62778 /* Sources */,
+				BE700F0F1F5CEB4300B62778 /* Frameworks */,
+				BE700F101F5CEB4300B62778 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE700F141F5CEB4300B62778 /* PBXTargetDependency */,
+			);
+			name = SelectAddressTests;
+			productName = SelectAddressTests;
+			productReference = BE700F121F5CEB4300B62778 /* SelectAddressTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE700F1C1F5CEB4300B62778 /* SelectAddressUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE700F2C1F5CEB4300B62778 /* Build configuration list for PBXNativeTarget "SelectAddressUITests" */;
+			buildPhases = (
+				BE700F191F5CEB4300B62778 /* Sources */,
+				BE700F1A1F5CEB4300B62778 /* Frameworks */,
+				BE700F1B1F5CEB4300B62778 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE700F1F1F5CEB4300B62778 /* PBXTargetDependency */,
+			);
+			name = SelectAddressUITests;
+			productName = SelectAddressUITests;
+			productReference = BE700F1D1F5CEB4300B62778 /* SelectAddressUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE700EF11F5CEB4300B62778 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Weixuetao;
+				TargetAttributes = {
+					BE700EF81F5CEB4300B62778 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					BE700F111F5CEB4300B62778 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BE700EF81F5CEB4300B62778;
+					};
+					BE700F1C1F5CEB4300B62778 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BE700EF81F5CEB4300B62778;
+					};
+				};
+			};
+			buildConfigurationList = BE700EF41F5CEB4300B62778 /* Build configuration list for PBXProject "SelectAddress" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE700EF01F5CEB4300B62778;
+			productRefGroup = BE700EFA1F5CEB4300B62778 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE700EF81F5CEB4300B62778 /* SelectAddress */,
+				BE700F111F5CEB4300B62778 /* SelectAddressTests */,
+				BE700F1C1F5CEB4300B62778 /* SelectAddressUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE700EF71F5CEB4300B62778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE700F0C1F5CEB4300B62778 /* LaunchScreen.storyboard in Resources */,
+				BE700F091F5CEB4300B62778 /* Assets.xcassets in Resources */,
+				BE700F071F5CEB4300B62778 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE700F101F5CEB4300B62778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE700F1B1F5CEB4300B62778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE700EF51F5CEB4300B62778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE700F041F5CEB4300B62778 /* ViewController.m in Sources */,
+				BE700F011F5CEB4300B62778 /* AppDelegate.m in Sources */,
+				BE700EFE1F5CEB4300B62778 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE700F0E1F5CEB4300B62778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE700F171F5CEB4300B62778 /* SelectAddressTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE700F191F5CEB4300B62778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE700F221F5CEB4300B62778 /* SelectAddressUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE700F141F5CEB4300B62778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE700EF81F5CEB4300B62778 /* SelectAddress */;
+			targetProxy = BE700F131F5CEB4300B62778 /* PBXContainerItemProxy */;
+		};
+		BE700F1F1F5CEB4300B62778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE700EF81F5CEB4300B62778 /* SelectAddress */;
+			targetProxy = BE700F1E1F5CEB4300B62778 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE700F051F5CEB4300B62778 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE700F061F5CEB4300B62778 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE700F0A1F5CEB4300B62778 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE700F0B1F5CEB4300B62778 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE700F241F5CEB4300B62778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE700F251F5CEB4300B62778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE700F271F5CEB4300B62778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SelectAddress/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weixuetao.SelectAddress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE700F281F5CEB4300B62778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SelectAddress/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weixuetao.SelectAddress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BE700F2A1F5CEB4300B62778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SelectAddressTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weixuetao.SelectAddressTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SelectAddress.app/SelectAddress";
+			};
+			name = Debug;
+		};
+		BE700F2B1F5CEB4300B62778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SelectAddressTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weixuetao.SelectAddressTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SelectAddress.app/SelectAddress";
+			};
+			name = Release;
+		};
+		BE700F2D1F5CEB4300B62778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SelectAddressUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weixuetao.SelectAddressUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SelectAddress;
+			};
+			name = Debug;
+		};
+		BE700F2E1F5CEB4300B62778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SelectAddressUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weixuetao.SelectAddressUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SelectAddress;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE700EF41F5CEB4300B62778 /* Build configuration list for PBXProject "SelectAddress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE700F241F5CEB4300B62778 /* Debug */,
+				BE700F251F5CEB4300B62778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE700F261F5CEB4300B62778 /* Build configuration list for PBXNativeTarget "SelectAddress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE700F271F5CEB4300B62778 /* Debug */,
+				BE700F281F5CEB4300B62778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE700F291F5CEB4300B62778 /* Build configuration list for PBXNativeTarget "SelectAddressTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE700F2A1F5CEB4300B62778 /* Debug */,
+				BE700F2B1F5CEB4300B62778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE700F2C1F5CEB4300B62778 /* Build configuration list for PBXNativeTarget "SelectAddressUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE700F2D1F5CEB4300B62778 /* Debug */,
+				BE700F2E1F5CEB4300B62778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE700EF11F5CEB4300B62778 /* Project object */;
+}
