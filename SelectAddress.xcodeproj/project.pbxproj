@@ -15,6 +15,23 @@
 		BE700F0C1F5CEB4300B62778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE700F0A1F5CEB4300B62778 /* LaunchScreen.storyboard */; };
 		BE700F171F5CEB4300B62778 /* SelectAddressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE700F161F5CEB4300B62778 /* SelectAddressTests.m */; };
 		BE700F221F5CEB4300B62778 /* SelectAddressUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE700F211F5CEB4300B62778 /* SelectAddressUITests.m */; };
+		BE700F341F5CEBDB00B62778 /* SelectAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE700F331F5CEBDB00B62778 /* SelectAddressController.m */; };
+		BE77D10B1F5CEF95007054AC /* SelectAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D10A1F5CEF95007054AC /* SelectAddressView.m */; };
+		BE77D10F1F5D0FCF007054AC /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D10E1F5D0FCF007054AC /* HttpRequest.m */; };
+		BE77D1131F5D3F21007054AC /* areaSelect.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE77D1121F5D3F21007054AC /* areaSelect.plist */; };
+		BE77D1171F5D604E007054AC /* AreaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D1151F5D604E007054AC /* AreaTableViewCell.m */; };
+		BE77D1311F5D65C6007054AC /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D11B1F5D65C6007054AC /* MJDictionaryCache.m */; };
+		BE77D1321F5D65C6007054AC /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D11E1F5D65C6007054AC /* MJExtensionConst.m */; };
+		BE77D1331F5D65C6007054AC /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D1201F5D65C6007054AC /* MJFoundation.m */; };
+		BE77D1341F5D65C6007054AC /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D1221F5D65C6007054AC /* MJProperty.m */; };
+		BE77D1351F5D65C6007054AC /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D1241F5D65C6007054AC /* MJPropertyKey.m */; };
+		BE77D1361F5D65C6007054AC /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D1261F5D65C6007054AC /* MJPropertyType.m */; };
+		BE77D1371F5D65C6007054AC /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D1281F5D65C6007054AC /* NSObject+MJClass.m */; };
+		BE77D1381F5D65C6007054AC /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D12A1F5D65C6007054AC /* NSObject+MJCoding.m */; };
+		BE77D1391F5D65C6007054AC /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D12C1F5D65C6007054AC /* NSObject+MJKeyValue.m */; };
+		BE77D13A1F5D65C6007054AC /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D12E1F5D65C6007054AC /* NSObject+MJProperty.m */; };
+		BE77D13B1F5D65C6007054AC /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D1301F5D65C6007054AC /* NSString+MJExtension.m */; };
+		BE77D13E1F5D6EE5007054AC /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE77D13D1F5D6EE5007054AC /* AreaModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +68,41 @@
 		BE700F1D1F5CEB4300B62778 /* SelectAddressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelectAddressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE700F211F5CEB4300B62778 /* SelectAddressUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectAddressUITests.m; sourceTree = "<group>"; };
 		BE700F231F5CEB4300B62778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE700F321F5CEBDB00B62778 /* SelectAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAddressController.h; sourceTree = "<group>"; };
+		BE700F331F5CEBDB00B62778 /* SelectAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAddressController.m; sourceTree = "<group>"; };
+		BE77D1091F5CEF95007054AC /* SelectAddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAddressView.h; sourceTree = "<group>"; };
+		BE77D10A1F5CEF95007054AC /* SelectAddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAddressView.m; sourceTree = "<group>"; };
+		BE77D10C1F5D06C8007054AC /* SelectAddress.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectAddress.pch; sourceTree = "<group>"; };
+		BE77D10D1F5D0FCF007054AC /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		BE77D10E1F5D0FCF007054AC /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		BE77D1121F5D3F21007054AC /* areaSelect.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = areaSelect.plist; sourceTree = "<group>"; };
+		BE77D1141F5D604E007054AC /* AreaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaTableViewCell.h; sourceTree = "<group>"; };
+		BE77D1151F5D604E007054AC /* AreaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaTableViewCell.m; sourceTree = "<group>"; };
+		BE77D11A1F5D65C6007054AC /* MJDictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDictionaryCache.h; sourceTree = "<group>"; };
+		BE77D11B1F5D65C6007054AC /* MJDictionaryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDictionaryCache.m; sourceTree = "<group>"; };
+		BE77D11C1F5D65C6007054AC /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		BE77D11D1F5D65C6007054AC /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		BE77D11E1F5D65C6007054AC /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		BE77D11F1F5D65C6007054AC /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		BE77D1201F5D65C6007054AC /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		BE77D1211F5D65C6007054AC /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		BE77D1221F5D65C6007054AC /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		BE77D1231F5D65C6007054AC /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		BE77D1241F5D65C6007054AC /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		BE77D1251F5D65C6007054AC /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		BE77D1261F5D65C6007054AC /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		BE77D1271F5D65C6007054AC /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		BE77D1281F5D65C6007054AC /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		BE77D1291F5D65C6007054AC /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		BE77D12A1F5D65C6007054AC /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		BE77D12B1F5D65C6007054AC /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		BE77D12C1F5D65C6007054AC /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		BE77D12D1F5D65C6007054AC /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		BE77D12E1F5D65C6007054AC /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		BE77D12F1F5D65C6007054AC /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		BE77D1301F5D65C6007054AC /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		BE77D13C1F5D6EE5007054AC /* AreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaModel.h; sourceTree = "<group>"; };
+		BE77D13D1F5D6EE5007054AC /* AreaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +153,10 @@
 		BE700EFB1F5CEB4300B62778 /* SelectAddress */ = {
 			isa = PBXGroup;
 			children = (
+				BE77D1191F5D65C6007054AC /* MJExtension */,
+				BE700F2F1F5CEBAF00B62778 /* Controllers */,
+				BE700F301F5CEBAF00B62778 /* Model */,
+				BE700F311F5CEBAF00B62778 /* Views */,
 				BE700EFF1F5CEB4300B62778 /* AppDelegate.h */,
 				BE700F001F5CEB4300B62778 /* AppDelegate.m */,
 				BE700F021F5CEB4300B62778 /* ViewController.h */,
@@ -117,7 +173,9 @@
 		BE700EFC1F5CEB4300B62778 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE77D1121F5D3F21007054AC /* areaSelect.plist */,
 				BE700EFD1F5CEB4300B62778 /* main.m */,
+				BE77D10C1F5D06C8007054AC /* SelectAddress.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +196,67 @@
 				BE700F231F5CEB4300B62778 /* Info.plist */,
 			);
 			path = SelectAddressUITests;
+			sourceTree = "<group>";
+		};
+		BE700F2F1F5CEBAF00B62778 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE700F321F5CEBDB00B62778 /* SelectAddressController.h */,
+				BE700F331F5CEBDB00B62778 /* SelectAddressController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE700F301F5CEBAF00B62778 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE77D10D1F5D0FCF007054AC /* HttpRequest.h */,
+				BE77D10E1F5D0FCF007054AC /* HttpRequest.m */,
+				BE77D13C1F5D6EE5007054AC /* AreaModel.h */,
+				BE77D13D1F5D6EE5007054AC /* AreaModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE700F311F5CEBAF00B62778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE77D1091F5CEF95007054AC /* SelectAddressView.h */,
+				BE77D10A1F5CEF95007054AC /* SelectAddressView.m */,
+				BE77D1141F5D604E007054AC /* AreaTableViewCell.h */,
+				BE77D1151F5D604E007054AC /* AreaTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE77D1191F5D65C6007054AC /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BE77D11A1F5D65C6007054AC /* MJDictionaryCache.h */,
+				BE77D11B1F5D65C6007054AC /* MJDictionaryCache.m */,
+				BE77D11C1F5D65C6007054AC /* MJExtension.h */,
+				BE77D11D1F5D65C6007054AC /* MJExtensionConst.h */,
+				BE77D11E1F5D65C6007054AC /* MJExtensionConst.m */,
+				BE77D11F1F5D65C6007054AC /* MJFoundation.h */,
+				BE77D1201F5D65C6007054AC /* MJFoundation.m */,
+				BE77D1211F5D65C6007054AC /* MJProperty.h */,
+				BE77D1221F5D65C6007054AC /* MJProperty.m */,
+				BE77D1231F5D65C6007054AC /* MJPropertyKey.h */,
+				BE77D1241F5D65C6007054AC /* MJPropertyKey.m */,
+				BE77D1251F5D65C6007054AC /* MJPropertyType.h */,
+				BE77D1261F5D65C6007054AC /* MJPropertyType.m */,
+				BE77D1271F5D65C6007054AC /* NSObject+MJClass.h */,
+				BE77D1281F5D65C6007054AC /* NSObject+MJClass.m */,
+				BE77D1291F5D65C6007054AC /* NSObject+MJCoding.h */,
+				BE77D12A1F5D65C6007054AC /* NSObject+MJCoding.m */,
+				BE77D12B1F5D65C6007054AC /* NSObject+MJKeyValue.h */,
+				BE77D12C1F5D65C6007054AC /* NSObject+MJKeyValue.m */,
+				BE77D12D1F5D65C6007054AC /* NSObject+MJProperty.h */,
+				BE77D12E1F5D65C6007054AC /* NSObject+MJProperty.m */,
+				BE77D12F1F5D65C6007054AC /* NSString+MJExtension.h */,
+				BE77D1301F5D65C6007054AC /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +368,7 @@
 				BE700F0C1F5CEB4300B62778 /* LaunchScreen.storyboard in Resources */,
 				BE700F091F5CEB4300B62778 /* Assets.xcassets in Resources */,
 				BE700F071F5CEB4300B62778 /* Main.storyboard in Resources */,
+				BE77D1131F5D3F21007054AC /* areaSelect.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +393,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE77D1391F5D65C6007054AC /* NSObject+MJKeyValue.m in Sources */,
+				BE77D1361F5D65C6007054AC /* MJPropertyType.m in Sources */,
+				BE77D1171F5D604E007054AC /* AreaTableViewCell.m in Sources */,
+				BE77D1321F5D65C6007054AC /* MJExtensionConst.m in Sources */,
 				BE700F041F5CEB4300B62778 /* ViewController.m in Sources */,
+				BE77D1331F5D65C6007054AC /* MJFoundation.m in Sources */,
+				BE77D1371F5D65C6007054AC /* NSObject+MJClass.m in Sources */,
+				BE77D10F1F5D0FCF007054AC /* HttpRequest.m in Sources */,
+				BE77D13B1F5D65C6007054AC /* NSString+MJExtension.m in Sources */,
 				BE700F011F5CEB4300B62778 /* AppDelegate.m in Sources */,
+				BE700F341F5CEBDB00B62778 /* SelectAddressController.m in Sources */,
+				BE77D1351F5D65C6007054AC /* MJPropertyKey.m in Sources */,
+				BE77D13E1F5D6EE5007054AC /* AreaModel.m in Sources */,
+				BE77D10B1F5CEF95007054AC /* SelectAddressView.m in Sources */,
 				BE700EFE1F5CEB4300B62778 /* main.m in Sources */,
+				BE77D13A1F5D65C6007054AC /* NSObject+MJProperty.m in Sources */,
+				BE77D1311F5D65C6007054AC /* MJDictionaryCache.m in Sources */,
+				BE77D1341F5D65C6007054AC /* MJProperty.m in Sources */,
+				BE77D1381F5D65C6007054AC /* NSObject+MJCoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +562,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SelectAddress/SelectAddress.pch";
 				INFOPLIST_FILE = SelectAddress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.weixuetao.SelectAddress;
@@ -437,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SelectAddress/SelectAddress.pch";
 				INFOPLIST_FILE = SelectAddress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.weixuetao.SelectAddress;
@@ -509,6 +647,7 @@
 				BE700F281F5CEB4300B62778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE700F291F5CEB4300B62778 /* Build configuration list for PBXNativeTarget "SelectAddressTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +656,7 @@
 				BE700F2B1F5CEB4300B62778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE700F2C1F5CEB4300B62778 /* Build configuration list for PBXNativeTarget "SelectAddressUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +665,7 @@
 				BE700F2E1F5CEB4300B62778 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

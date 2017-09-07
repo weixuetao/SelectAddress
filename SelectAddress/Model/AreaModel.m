@@ -10,4 +10,10 @@
 
 @implementation AreaModel
 
++ (NSDictionary *)mj_objectClassInArray{
+    return  @{
+            @"children":@"AreaModel"
+      };
+}
+
 @end

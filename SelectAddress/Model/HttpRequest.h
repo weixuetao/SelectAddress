@@ -15,13 +15,6 @@ typedef void(^FaildBlock)(id errorInfo);
 @interface HttpRequest : NSObject
 
 
-+ (void)commonNetRequestUrl:(NSString *)requestUrl Paramete:(id)parDict respondBlock:(RespondBlock)success faildBlock:(FaildBlock)faild;
-
-+ (void)post:(NSString *)urlStr param:(NSDictionary *)dict imageKey:(NSString *)key image:(UIImage *)image respondBlock:(RespondBlock)success faildBlock:(FaildBlock)faild;
-
-
-+ (void)showHUDNetRequestUrl:(NSString *)requestUrl Paramete:(id)parDict requestView:(UIView *)view respondBlock:(RespondBlock)success faildBlock:(FaildBlock)faild;
-
 
 + (void)commonNetRequestUrl:(NSString *)requestUrl Paramete:(id)parDict isShowHud:(BOOL)isShow respondBlock:(RespondBlock)success faildBlock:(FaildBlock)faild;
 
