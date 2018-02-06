@@ -16,6 +16,12 @@
 #define DeviceWidth [UIScreen mainScreen].bounds.size.width
 #define DeviceHeight [UIScreen mainScreen].bounds.size.height
 
+//RGB的颜色设置
+#define COLOR(R, G, B) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0]
+
+//状态栏高度
+#define STATUS_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height
+
 #import "MJExtension.h"
 
 #endif /* SelectAddress_pch */

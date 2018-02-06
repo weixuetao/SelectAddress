@@ -35,8 +35,12 @@
 - (UITableView *)areaTableView{
     if (!_areaTableView) {
         _areaTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, DeviceWidth, DeviceWidth) style:UITableViewStylePlain];
+        if (STATUS_HEIGHT==44) {
+            _areaTableView.frame = CGRectMake(0, 0, DeviceWidth, DeviceWidth-34);
+        }
         _areaTableView.delegate = self;
         _areaTableView.dataSource = self;
+        _areaTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _areaTableView;
 }
@@ -56,19 +60,21 @@
     }
     AreaModel * area = self.addressArray[indexPath.row];
     cell.textLabel.text = area.region_name;
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     
     NSInteger currentCellTag = self.tag;
     NSString * addressStr = @"";
     if (currentCellTag <= self.cacheArray.count) {
-        addressStr = self.cacheArray[currentCellTag-1];
+        AreaModel *cacehArray = self.cacheArray[currentCellTag-1];
+        addressStr = cacehArray.region_name;
     }
     if ([addressStr isEqualToString:area.region_name]) {
-        cell.textLabel.textColor = [UIColor redColor];
+        cell.textLabel.textColor = COLOR(224, 52, 47);
     }else{
-        cell.textLabel.textColor = [UIColor blackColor];
+        cell.textLabel.textColor = COLOR(51, 51, 51);
     }
     
-
+    
     return cell;
 }
 
@@ -91,8 +97,9 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
 @end
+

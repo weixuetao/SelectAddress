@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) UIScrollView * tabItemsView;          //顶部地址视图
 
+@property (nonatomic, strong) UIButton * closeButton;
+
 @property (nonatomic, strong) NSArray       * selectedArray;        //传入的选择过的地址
 
 @property (nonatomic, strong) UILabel       * horizontalLabel;      //横向移动视图
@@ -31,6 +33,7 @@
 @property (nonatomic, strong) AreaModel     *cityModel;           //市
 
 @property (nonatomic, strong) AreaModel     * countyModel;        //区
+
 @end
 
 @implementation SelectAddressView
@@ -52,7 +55,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self layoutSelectAddressUI];
-
+        
     }
     return self;
 }
@@ -72,7 +75,7 @@
 }
 
 - (void)layoutSelectAddressUI{
-    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
+    self.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.4];
     self.cacheArray = [[NSMutableArray alloc] initWithCapacity:0];
     if (self.selectedArray.count>0) {
         self.cacheArray = [self.selectedArray mutableCopy];
@@ -80,16 +83,23 @@
     //添加底部视图
     [self addSubview:self.bgView];
     
+    //添加关闭按钮
+    [self.bgView addSubview:self.closeButton];
+    
     //头部标题
     UILabel * addressTitleLbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 12, DeviceWidth, 20)];
     addressTitleLbl.textAlignment = NSTextAlignmentCenter;
-    addressTitleLbl.textColor = [UIColor colorWithRed:168.0/255.0 green:169.0/255.0 blue:171.0/255.0 alpha:1.0];
-    addressTitleLbl.font = [UIFont systemFontOfSize:13];
+    addressTitleLbl.textColor =  COLOR(51, 51, 51);
+    addressTitleLbl.font = [UIFont systemFontOfSize:16];
     addressTitleLbl.text = @"所在地区";
     [self.bgView addSubview:addressTitleLbl];
     
     //横线
-    UILabel * underLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 62, DeviceWidth, 1)];
+    UILabel * topLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, DeviceWidth, 1)];
+    topLine.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1.0];
+    [self.bgView addSubview:topLine];
+    
+    UILabel * underLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 89, DeviceWidth, 1)];
     underLine.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:1.0];
     [self.bgView addSubview:underLine];
     
@@ -103,7 +113,6 @@
     
     //选择table
     [self.bgView addSubview:self.addressTableView];
-    
 }
 
 
@@ -113,7 +122,7 @@
  */
 - (UIScrollView *)tabItemsView{
     if (!_tabItemsView) {
-        _tabItemsView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 40, DeviceWidth, 20)];
+        _tabItemsView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 50, DeviceWidth, 40)];
         _tabItemsView.showsVerticalScrollIndicator = NO;
         _tabItemsView.showsHorizontalScrollIndicator = NO;
         _tabItemsView.bounces = NO;
@@ -124,7 +133,7 @@
 - (void)latyouScrollViewChildrenUI{
     for (int i = 0; i<self.selectedArray.count; i++) {
         UIButton * addressButton = [self createAddressButtonWithTitle:self.selectedArray[i] withButtonTag:10+i];
-        addressButton.frame = CGRectMake(i*DeviceWidth/4, 0, DeviceWidth/4, 20);
+        addressButton.frame = CGRectMake(i*DeviceWidth/4, 0, DeviceWidth/4, 40);
         [self.tabItemsView addSubview:addressButton];
         self.cellCount = self.selectedArray.count;
     }
@@ -132,7 +141,7 @@
     if (self.addressArray.count == 0&&self.selectedArray.count == 0) {
         UIButton * addressButton = [self createAddressButtonWithTitle:@"请选择" withButtonTag:10];
         addressButton.selected = YES;
-        addressButton.frame = CGRectMake(0, 0, DeviceWidth/4, 20);
+        addressButton.frame = CGRectMake(0, 0, DeviceWidth/4, 40);
         [self.tabItemsView addSubview:addressButton];
         self.cellCount = 1;
         
@@ -141,10 +150,10 @@
 
 - (UIButton *)createAddressButtonWithTitle:(NSString *)addressString withButtonTag:(NSInteger)tag{
     UIButton * addressButton = [[UIButton alloc] init];
-    [addressButton setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-    [addressButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [addressButton setTitleColor:COLOR(224, 52, 47) forState:UIControlStateSelected];
+    [addressButton setTitleColor: COLOR(51, 51, 51) forState:UIControlStateNormal];
     [addressButton setTitle:addressString forState:UIControlStateNormal];
-    addressButton.titleLabel.font = [UIFont systemFontOfSize:13];
+    addressButton.titleLabel.font = [UIFont systemFontOfSize:14];
     [addressButton addTarget:self action:@selector(addressButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     addressButton.tag = tag;
     return addressButton;
@@ -153,8 +162,8 @@
 
 - (UILabel *)horizontalLabel{
     if (!_horizontalLabel) {
-        _horizontalLabel = [[UILabel alloc] initWithFrame:CGRectMake(DeviceWidth/16, 61, DeviceWidth/8, 2)];
-        _horizontalLabel.backgroundColor = [UIColor redColor];
+        _horizontalLabel = [[UILabel alloc] initWithFrame:CGRectMake(DeviceWidth/16, 88, DeviceWidth/8, 2)];
+        _horizontalLabel.backgroundColor = COLOR(224, 52, 47);
     }
     return _horizontalLabel;
 }
@@ -164,20 +173,28 @@
  */
 - (UIView *)bgView{
     if (!_bgView) {
-        _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, DeviceHeight, DeviceWidth, DeviceWidth+63)];
+        _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, DeviceHeight, DeviceWidth, DeviceWidth+91)];
         
         _bgView.backgroundColor = [UIColor whiteColor];
     }
     return _bgView;
 }
 
+- (UIButton *)closeButton{
+    if(!_closeButton){
+        _closeButton = [[UIButton alloc] initWithFrame:CGRectMake(DeviceWidth-59, 5, 40, 40)];
+        [_closeButton setImage:[UIImage imageNamed:@"关闭.png"] forState:UIControlStateNormal];
+        [_closeButton addTarget:self action:@selector(closeButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return  _closeButton;
+}
 
 /**
  表
  */
 - (UITableView *)addressTableView{
     if (!_addressTableView) {
-        _addressTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 63, DeviceWidth, DeviceWidth) style:UITableViewStylePlain];
+        _addressTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 91, DeviceWidth, DeviceWidth) style:UITableViewStylePlain];
         _addressTableView.delegate = self;
         _addressTableView.dataSource = self;
         _addressTableView.scrollsToTop = NO;
@@ -186,6 +203,12 @@
         _addressTableView.showsVerticalScrollIndicator = NO;
         _addressTableView.pagingEnabled = YES;
         _addressTableView.bounces = NO;
+        if (@available(iOS 11.0, *)) {
+            _addressTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;//UIScrollView也适用
+            _addressTableView.estimatedRowHeight = 0;
+            _addressTableView.estimatedSectionHeaderHeight = 0;
+            _addressTableView.estimatedSectionFooterHeight = 0;
+        }
     }
     return _addressTableView;
 }
@@ -210,7 +233,7 @@
     switch (indexPath.row) {
         case 0:
             cell.addressArray = self.addressArray;
-    
+            
             break;
         case 1:
             cell.addressArray = self.provienceModel.children;
@@ -239,15 +262,16 @@
         case 0:     //省（或市）
         {
             if (self.cacheArray.count>0) {
-                NSString * cacheProvience = self.cacheArray[0];
-                if (![cacheProvience isEqualToString:areaModel.region_name]) {
+                //                NSString * cacheProvience = self.cacheArray[0];
+                AreaModel *cacheProvienceModel = self.cacheArray[0];
+                if (![cacheProvienceModel.region_name isEqualToString:areaModel.region_name]) {
                     [self.cacheArray removeAllObjects];
-                    [self.cacheArray addObject:areaModel.region_name];
+                    [self.cacheArray addObject:areaModel];
                 }else{
                     return;
                 }
             }else{
-                [self.cacheArray addObject:areaModel.region_name];
+                [self.cacheArray addObject:areaModel];
             }
             self.provienceModel = areaModel;
             
@@ -267,7 +291,7 @@
         case 1:     //市（或区）
         {
             if (self.cacheArray.count == 1) {
-                [self.cacheArray  addObject:areaModel.region_name];
+                [self.cacheArray  addObject:areaModel];
             }else{
                 //删除后面级别的元素
                 if (self.cacheArray.count>2) {
@@ -278,7 +302,7 @@
                     }];
                 }
                 
-                [self.cacheArray replaceObjectAtIndex:1 withObject:areaModel.region_name];
+                [self.cacheArray replaceObjectAtIndex:1 withObject:areaModel];
             }
             self.cityModel = areaModel;
             if (areaModel.children.count>0) {
@@ -296,7 +320,7 @@
         case 2:     //
         {
             if (self.cacheArray.count == 2) {
-                [self.cacheArray  addObject:areaModel.region_name];
+                [self.cacheArray  addObject:areaModel];
             }else{
                 //删除后面级别的元素
                 if (self.cacheArray.count>3) {
@@ -306,7 +330,7 @@
                         }
                     }];
                 }
-                [self.cacheArray replaceObjectAtIndex:2 withObject:areaModel.region_name];
+                [self.cacheArray replaceObjectAtIndex:2 withObject:areaModel];
             }
             if (areaModel.children.count>0) {
                 self.cellCount = 4;
@@ -337,8 +361,9 @@
     
     if (areaModel.children.count == 0) {
         for (int i = 0; i<self.cacheArray.count; i++) {
-            UIButton * itemButton = [self createAddressButtonWithTitle:self.cacheArray[i]   withButtonTag:i+10];
-            itemButton.frame = CGRectMake(i*DeviceWidth/4, 0, DeviceWidth/4, 20);
+            AreaModel *cacheModel = self.cacheArray[i];
+            UIButton * itemButton = [self createAddressButtonWithTitle:cacheModel.region_name   withButtonTag:i+10];
+            itemButton.frame = CGRectMake(i*DeviceWidth/4, 0, DeviceWidth/4, 40);
             if (i == self.cacheArray.count-1) {
                 itemButton.selected = YES;
             }
@@ -346,7 +371,7 @@
         }
         
         [UIView animateWithDuration:0.25 animations:^{
-            self.horizontalLabel.frame = CGRectMake(DeviceWidth/16+(self.cacheArray.count-1)*DeviceWidth/4, 61, DeviceWidth/8, 2);
+            self.horizontalLabel.frame = CGRectMake(DeviceWidth/16+(self.cacheArray.count-1)*DeviceWidth/4, 88, DeviceWidth/8, 2);
         } completion:^(BOOL finished) {
             
         }];
@@ -354,19 +379,20 @@
         
         for (int i = 0; i<self.cacheArray.count+1; i++) {
             if (i<self.cacheArray.count) {
-                UIButton * itemButton = [self createAddressButtonWithTitle:self.cacheArray[i]   withButtonTag:i+10];
-                itemButton.frame = CGRectMake(i*DeviceWidth/4, 0, DeviceWidth/4, 20);
+                AreaModel *cacheModel = self.cacheArray[i];
+                UIButton * itemButton = [self createAddressButtonWithTitle:cacheModel.region_name   withButtonTag:i+10];
+                itemButton.frame = CGRectMake(i*DeviceWidth/4, 0, DeviceWidth/4, 40);
                 [self.tabItemsView addSubview:itemButton];
             }else{
                 UIButton * itemButton = [self createAddressButtonWithTitle:@"请选择"  withButtonTag:i+10];
-                itemButton.frame = CGRectMake(i*DeviceWidth/4, 0, DeviceWidth/4, 20);
+                itemButton.frame = CGRectMake(i*DeviceWidth/4, 0, DeviceWidth/4, 40);
                 itemButton.selected = YES;
                 [self.tabItemsView addSubview:itemButton];
             }
         }
         
         [UIView animateWithDuration:0.25 animations:^{
-             self.horizontalLabel.frame = CGRectMake(DeviceWidth/16+self.cacheArray.count*DeviceWidth/4, 61, DeviceWidth/8, 2);
+            self.horizontalLabel.frame = CGRectMake(DeviceWidth/16+self.cacheArray.count*DeviceWidth/4, 88, DeviceWidth/8, 2);
         } completion:^(BOOL finished) {
             
         }];
@@ -381,13 +407,15 @@
     [self.addressArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         AreaModel * tempProArea = (AreaModel *)obj;
         //获取provience
-        if ([tempProArea.region_name isEqualToString:self.cacheArray[0]]) {
+        AreaModel *cacheModel = self.cacheArray[0];
+        if ([tempProArea.region_name isEqualToString:cacheModel.region_name]) {
             self.provienceModel = tempProArea;
             //获取city
             if (tempProArea.children.count>0) {
                 [tempProArea.children enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     AreaModel * tempcityArea = (AreaModel *)obj;
-                    if ([tempcityArea.region_name isEqualToString:self.cacheArray[1]]) {
+                    AreaModel *cacheModel = self.cacheArray[1];
+                    if ([tempcityArea.region_name isEqualToString:cacheModel.region_name]) {
                         self.cityModel = tempcityArea;
                         //获取区(暂时不需要)
                     }
@@ -395,7 +423,7 @@
             }
         }
     }];
-
+    
 }
 
 
@@ -404,19 +432,21 @@
     
     [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:self];
     
+    [[UIApplication sharedApplication].keyWindow addSubview:self];
+    
     [UIView animateWithDuration:0.26 animations:^{
-        self.bgView.frame = CGRectMake(0, DeviceHeight-DeviceWidth-63, DeviceWidth, DeviceWidth+63);
+        self.bgView.frame = CGRectMake(0, DeviceHeight-DeviceWidth-91, DeviceWidth, DeviceWidth+91);
     } completion:^(BOOL finished) {
         
     }];
-
+    
 }
 
 - (void)hiddenSelectAddressView;
 {
     [self.addressTableView reloadData];
     [UIView animateWithDuration:0.26 animations:^{
-        self.bgView.frame = CGRectMake(0, DeviceHeight, DeviceWidth, DeviceWidth+63);
+        self.bgView.frame = CGRectMake(0, DeviceHeight, DeviceWidth, DeviceWidth+91);
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
@@ -427,7 +457,7 @@
     
     [self.addressTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:tabButton.tag-10 inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:YES];
     [UIView animateWithDuration:0.25 animations:^{
-        self.horizontalLabel.frame = CGRectMake(DeviceWidth/16+(tabButton.tag -10)*DeviceWidth/4, 61, DeviceWidth/8, 2);
+        self.horizontalLabel.frame = CGRectMake(DeviceWidth/16+(tabButton.tag -10)*DeviceWidth/4, 88, DeviceWidth/8, 2);
     } completion:^(BOOL finished) {
         
     }];
@@ -465,22 +495,25 @@
         }
         
         [UIView animateWithDuration:0.25 animations:^{
-            self.horizontalLabel.frame = CGRectMake(DeviceWidth/16+i*DeviceWidth/4, 61, DeviceWidth/8, 2);
+            self.horizontalLabel.frame = CGRectMake(DeviceWidth/16+i*DeviceWidth/4, 88, DeviceWidth/8, 2);
         } completion:^(BOOL finished) {
             
         }];
     }
 }
 
-
+- (void)closeButtonAction{
+    [self hiddenSelectAddressView];
+}
 
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end
+

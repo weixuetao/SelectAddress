@@ -79,9 +79,11 @@
 //@[@"辽宁",@"抚顺",@"望花"]
 - (void)finishedSelectAddressWithSelectedArray:(NSArray *)selectedArray{
     NSString * addressStr = @"";
-    for (NSString * tempAddress in selectedArray) {
-        addressStr = [addressStr stringByAppendingString:tempAddress];
+    NSMutableArray *areasArray = [[NSMutableArray alloc]init];
+    for (AreaModel * tempAddressModel in selectedArray) {
+        [areasArray addObject:tempAddressModel.region_name];
     }
+    addressStr = [areasArray componentsJoinedByString:@"、"];
     self.addressLabel.text = addressStr;
 }
 
